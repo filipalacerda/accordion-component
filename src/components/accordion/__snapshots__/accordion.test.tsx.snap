@@ -9,7 +9,7 @@ exports[`Accordion when component renders should render the component 1`] = `
     <button
       aria-controls="accordion-content"
       aria-expanded="false"
-      class="css-1054hxc"
+      class="css-u0lu2m"
       data-testid="accordion-button"
     >
       Title 1

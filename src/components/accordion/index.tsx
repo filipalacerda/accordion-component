@@ -26,14 +26,14 @@ const Styles = {
     width: "100%",
     background: "white",
     cursor: "pointer",
-    "@media (max-width: 960px)": {
-      textAlign: "left",
-    },
     fontSize: "medium",
     paddingBottom: "5px",
-
     ":disabled": {
       cursor: "not-allowed",
+    },
+
+    "@media (max-width: 960px)": {
+      textAlign: "left",
     },
   }),
   content: css({
@@ -57,11 +57,10 @@ const Accordion = ({
 
   /**
    * Adds keydown event support for
-   * enter, arrow up and arrow down keys
+   * arrow up and arrow down keys
    * @param e
    */
   const handleOnKeyDown = (e: KeyboardEvent) => {
-    console.log(e.key);
     if (e.key === "ArrowUp") {
       setIsOpen(false);
     }
