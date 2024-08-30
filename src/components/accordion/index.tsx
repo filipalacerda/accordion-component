@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React from "react";
+import React, { KeyboardEventHandler } from "react";
 import { css } from "@emotion/css";
 import { ReactNode, useState } from "react";
 
@@ -43,9 +43,24 @@ const Accordion = ({
 }: AccordionProps) => {
   const [isOpen, setIsOpen] = useState(isOpenDefault || false);
 
-  // Add keyboard support
   // Fix transitions
   // Add unit tests
+
+  /**
+   * Adds extra keydown event support for
+   * arrow up and arrow down keys
+   * @param e
+   */
+  const handleOnKeyDown = (e: KeyboardEvent) => {
+    console.log(e.key);
+    if (e.key === "ArrowUp") {
+      setIsOpen(false);
+    }
+
+    if (e.key === "ArrowDown" || e.key === "Enter") {
+      setIsOpen(true);
+    }
+  };
 
   return (
     <section css={Styles.accordion}>
@@ -55,16 +70,31 @@ const Accordion = ({
         css={Styles.button}
         onClick={() => setIsOpen(!isOpen)}
         disabled={isDisabled}
+        onKeyDown={(e) => handleOnKeyDown(e as unknown as KeyboardEvent)}
+        data-testid="accordion-button"
       >
         {title}
+
         {isOpen ? (
-          <IoIosArrowUp title="Close accordion" size={24} />
+          <IoIosArrowUp
+            title="Close accordion icon"
+            size={24}
+            data-testid="arrow-up"
+          />
         ) : (
-          <IoIosArrowDown title="Open accordion" size={24} />
+          <IoIosArrowDown
+            title="Open accordion icon"
+            size={24}
+            data-testid="arrow-down"
+          />
         )}
       </button>
       {isOpen && (
-        <div css={Styles.content} id="accordion-content">
+        <div
+          css={Styles.content}
+          id="accordion-content"
+          data-testid="accordion-content"
+        >
           {content}
         </div>
       )}

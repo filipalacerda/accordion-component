@@ -10,6 +10,10 @@ Create a reusable Accordion component that abstracts common elements and feature
 1. Provide any workings, such as sketches, flowcharts, or notes, that you created to
    help with the abstraction process.
 
+## Acessibility
+
+## Responsive Design
+
 ## Commands
 
 In the project directory, you can run:
