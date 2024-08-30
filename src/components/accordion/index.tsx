@@ -62,6 +62,7 @@ const Accordion = ({
       <button
         aria-expanded={isOpen}
         aria-controls="accordion-content"
+        aria-disabled={isDisabled}
         css={Styles.button}
         onClick={() => setIsOpen(!isOpen)}
         disabled={isDisabled}
