@@ -47,8 +47,8 @@ const Accordion = ({
   // Add unit tests
 
   /**
-   * Adds extra keydown event support for
-   * arrow up and arrow down keys
+   * Adds keydown event support for
+   * enter, arrow up and arrow down keys
    * @param e
    */
   const handleOnKeyDown = (e: KeyboardEvent) => {
