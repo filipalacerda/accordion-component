@@ -75,18 +75,6 @@ describe("Accordion", () => {
       button = screen.getByTestId("accordion-button");
     });
 
-    describe("when the user presses enter key", () => {
-      it("should open the accordion", async () => {
-        await fireEvent.keyDown(button, {
-          key: "Enter",
-          code: "Enter",
-          charCode: 13,
-        });
-
-        expect(screen.getByTestId("accordion-content")).toBeInTheDocument();
-      });
-    });
-
     describe("when the user presses arrowDown key", () => {
       it("should open the accordion", async () => {
         await fireEvent.keyDown(button, {

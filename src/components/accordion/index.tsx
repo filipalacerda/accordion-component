@@ -1,4 +1,5 @@
 /** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
 import { ReactNode, useState } from "react";
 
 import { IoIosArrowDown } from "react-icons/io";
@@ -12,12 +13,12 @@ type AccordionProps = {
 };
 
 const Styles = {
-  accordion: {
-    border: "1px solid #eeeeee",
+  accordion: css({
+    border: "1px solid #797777",
     padding: "5px",
     borderRadius: "3px",
-  },
-  button: {
+  }),
+  button: css({
     border: "none",
     display: "flex",
     alignItems: "center",
@@ -25,11 +26,21 @@ const Styles = {
     width: "100%",
     background: "white",
     cursor: "pointer",
-  },
-  content: {
+    "@media (max-width: 960px)": {
+      textAlign: "left",
+    },
+    fontSize: "medium",
+    paddingBottom: "5px",
+  }),
+  content: css({
     display: "flex",
     padding: "20px 5px",
-  },
+    borderTop: "1px solid #797777",
+  }),
+  // Prevents the icon from shrinking in smaller screens
+  icon: css({
+    flex: "none",
+  }),
 };
 
 const Accordion = ({
@@ -51,7 +62,7 @@ const Accordion = ({
       setIsOpen(false);
     }
 
-    if (e.key === "ArrowDown" || e.key === "Enter") {
+    if (e.key === "ArrowDown") {
       setIsOpen(true);
     }
   };
@@ -75,12 +86,14 @@ const Accordion = ({
             title="Close accordion icon"
             size={24}
             data-testid="arrow-up"
+            css={Styles.icon}
           />
         ) : (
           <IoIosArrowDown
             title="Open accordion icon"
             size={24}
             data-testid="arrow-down"
+            css={Styles.icon}
           />
         )}
       </button>

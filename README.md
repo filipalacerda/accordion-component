@@ -14,8 +14,12 @@ Create a reusable Accordion component that abstracts common elements and feature
 
 1. The component has `aria` attributes that comply with a11y practices
 2. The component has keyDown support for arrow keys and enter key
+3. The component does not have heading levels. This is because it's meant to be used anywhere in a page, and bad nesting heading levels throw an a11y error
 
 ## Responsive Design
+
+1. The component works on both Desktop and Mobile by using `flex`
+2. The only difference between Desktop and Mobile is the alignment of the title text
 
 ## Commands
 
