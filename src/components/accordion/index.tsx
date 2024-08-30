@@ -1,5 +1,4 @@
 /** @jsxImportSource @emotion/react */
-import React from "react";
 import { ReactNode, useState } from "react";
 
 import { IoIosArrowDown } from "react-icons/io";
