@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import { css } from "@emotion/react";
 import Accordion from "./components/accordion";
+import AccordionList from "./components/accordionList";
 
 const Styles = {
   block: css({
@@ -78,6 +79,43 @@ function App() {
               </p>
             </div>
           }
+        />
+      </div>
+
+      <div css={Styles.block}>
+        <h5>With Disabled</h5>
+        <Accordion
+          title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          content="This is the content"
+          isDisabled
+        />
+      </div>
+
+      <div css={Styles.block}>
+        <h5>With open by default</h5>
+        <Accordion
+          title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+          content="This is the content"
+        />
+      </div>
+
+      <div css={Styles.block}>
+        <h5>List of accordions</h5>
+        <AccordionList
+          items={[
+            {
+              title: "Title 1",
+              content: "This is the content",
+            },
+            {
+              title: "Title 2",
+              content: "This is the content",
+            },
+            {
+              title: "Title 3",
+              content: "This is the content",
+            },
+          ]}
         />
       </div>
     </div>

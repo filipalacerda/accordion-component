@@ -3,16 +3,18 @@
 exports[`Accordion when component renders should render the component 1`] = `
 <div>
   <section
-    class="css-154rj3e"
+    class="css-nvtxod"
+    data-testid="accordion"
   >
     <button
       aria-controls="accordion-content"
       aria-expanded="false"
-      class="css-lkoooo"
+      class="css-1054hxc"
       data-testid="accordion-button"
     >
       Title 1
       <svg
+        class="css-me3p27"
         data-testid="arrow-down"
         fill="currentColor"
         height="24"

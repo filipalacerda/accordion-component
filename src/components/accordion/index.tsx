@@ -5,7 +5,7 @@ import { ReactNode, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 
-type AccordionProps = {
+export type AccordionProps = {
   title: string;
   content: ReactNode;
   isDisabled?: boolean;
@@ -31,6 +31,10 @@ const Styles = {
     },
     fontSize: "medium",
     paddingBottom: "5px",
+
+    ":disabled": {
+      cursor: "not-allowed",
+    },
   }),
   content: css({
     display: "flex",
@@ -68,7 +72,7 @@ const Accordion = ({
   };
 
   return (
-    <section css={Styles.accordion}>
+    <section css={Styles.accordion} data-testid="accordion">
       <button
         aria-expanded={isOpen}
         aria-controls="accordion-content"
