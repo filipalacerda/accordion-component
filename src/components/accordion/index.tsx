@@ -1,5 +1,5 @@
 /** @jsxImportSource @emotion/react */
-import React, { KeyboardEventHandler } from "react";
+import React from "react";
 import { css } from "@emotion/css";
 import { ReactNode, useState } from "react";
 
