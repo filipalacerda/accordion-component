@@ -12,6 +12,9 @@ Create a reusable Accordion component that abstracts common elements and feature
 
 ## Acessibility
 
+1. The component has `aria` attributes that comply with a11y practices
+2. The component has keyDown support for arrow keys and enter key
+
 ## Responsive Design
 
 ## Commands
