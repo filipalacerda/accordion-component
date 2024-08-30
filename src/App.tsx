@@ -56,7 +56,7 @@ function App() {
       </div>
 
       <div css={[Styles.block, Styles.smallBlock]}>
-        <h5>With contrained parent width</h5>
+        <h5>With constrained parent width</h5>
         <Accordion
           title="Title 2"
           content={
