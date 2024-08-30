@@ -6,7 +6,7 @@ function App() {
       <Accordion
         title="Title 1"
         content="This is the content"
-        isOpenDefault={true}
+        defaultExpanded={true}
       />
 
       <Accordion title="Title 2" content="This is the content" />

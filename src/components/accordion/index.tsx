@@ -9,7 +9,7 @@ type AccordionProps = {
   title: string;
   content: ReactNode;
   isDisabled?: boolean;
-  isOpenDefault?: boolean;
+  defaultExpanded?: boolean;
 };
 
 const Styles = {
@@ -17,7 +17,6 @@ const Styles = {
     border: "1px solid #eeeeee",
     padding: "5px",
     borderRadius: "3px",
-    transition: "max-height 0.5s ease",
   },
   button: {
     border: "none",
@@ -38,12 +37,9 @@ const Accordion = ({
   title,
   content,
   isDisabled,
-  isOpenDefault,
+  defaultExpanded,
 }: AccordionProps) => {
-  const [isOpen, setIsOpen] = useState(isOpenDefault || false);
-
-  // Fix transitions
-  // Add unit tests
+  const [isOpen, setIsOpen] = useState(defaultExpanded || false);
 
   /**
    * Adds keydown event support for
