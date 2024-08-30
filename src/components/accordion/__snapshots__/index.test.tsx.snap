@@ -3,7 +3,7 @@
 exports[`Accordion when component renders should render the component 1`] = `
 <div>
   <section
-    class="css-ckbt0l"
+    class="css-154rj3e"
   >
     <button
       aria-controls="accordion-content"
